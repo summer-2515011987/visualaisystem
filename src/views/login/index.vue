@@ -1,36 +1,37 @@
 <template>
   <div class="login-container">
-    <el-card class="login-box">
-      <!-- <img src="@/assets/images/logo_index.png" alt="" /> -->
-      <el-form :model="ruleForm" :rules="loginRules" ref="ruleForm">
-        <el-form-item prop="mobile">
+    <div class="login-box">
+      <el-form
+        :model="ruleForm"
+        status-icon
+        :rules="loginRules"
+        ref="ruleForm"
+        label-width="100px"
+        class="demo-ruleForm"
+      >
+        <h3>视觉AI系统</h3>
+        <el-form-item label="账号" prop="pass">
           <el-input
-            type="text"
+            type="password"
             v-model="ruleForm.mobile"
-            placeholder="请输入手机号"
             autocomplete="off"
+            placeholder="请输入账号"
           ></el-input>
         </el-form-item>
-        <el-form-item prop="verifycode">
+        <el-form-item label="密码" prop="checkPass">
           <el-input
+            type="password"
             v-model="ruleForm.verifycode"
-            placeholder="请输入验证码"
-            style="width:220px"
+            autocomplete="off"
+            placeholder="请输入密码"
           ></el-input>
-          <el-button style="float:right">获取验证码</el-button>
         </el-form-item>
+
         <el-form-item>
-          <el-checkbox :value="true"
-            >我已阅读并同意用户协议和隐私条款</el-checkbox
-          >
-        </el-form-item>
-        <el-form-item>
-          <el-button class="loginBtn" type="primary" @click="login"
-            >登录</el-button
-          >
+          <el-button type="primary" @click="login">登陆系统</el-button>
         </el-form-item>
       </el-form>
-    </el-card>
+    </div>
   </div>
 </template>
 
@@ -113,17 +114,32 @@ export default {
     center/cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   .login-box {
-    width: 400px;
-    height: 330px;
-
-    img {
-      display: block; //img属于行内替换元素,如果需要设置宽高需转换为块级
-      margin: 10px auto;
-      width: 200px;
+    width: 380px;
+    height: 340px;
+    border: 6px solid #fff;
+    border-radius: 5%;
+    margin-right: 100px;
+    .el-form-item {
+      width: 90%;
     }
-    .loginBtn {
+    h3 {
+      text-align: center;
+      font-size: 30px;
+    }
+    /deep/ .el-form-item__label {
+      text-align: right;
+      vertical-align: middle;
+      float: left;
+      font-size: 18px;
+      color: #606266;
+      line-height: 40px;
+      padding: 0 12px 0 0;
+      box-sizing: border-box;
+      font-weight: bold;
+    }
+    .el-button {
       width: 100%;
     }
   }
