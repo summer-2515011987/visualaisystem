@@ -8,7 +8,7 @@
     active-text-color="#ffd04b"
     :collapse-transition="false"
   >
-    <el-menu-item index="/">
+    <el-menu-item index="/home/node">
       <i class="el-icon-s-home"></i>
       <span slot="title">边缘节点</span>
     </el-menu-item>
