@@ -81,23 +81,25 @@ export default {
   mounted() {},
   methods: {
     login() {
+      console.log("登陆");
+      this.$router.push("/home");
       // console.log("this.$refs.ruleForm.validate", this.$refs.ruleForm.validate);
-      this.$refs.ruleForm.validate(valid => {
-        if (!valid) return false;
-        let data = {
-          loginName: this.ruleForm.mobile,
-          password: this.ruleForm.verifycode
-        };
-        service
-          .login(data)
-          .then(res => {
-            console.log("登录接口测试", res);
-          })
-          .catch(err => {
-            console.log(err);
-          });
-        this.$router.push("/Home");
-      });
+      // this.$refs.ruleForm.validate(valid => {
+      //   if (!valid) return false;
+      //   let data = {
+      //     loginName: this.ruleForm.mobile,
+      //     password: this.ruleForm.verifycode
+      //   };
+      //   service
+      //     .login(data)
+      //     .then(res => {
+      //       console.log("登录接口测试", res);
+      //     })
+      //     .catch(err => {
+      //       console.log(err);
+      //     });
+      //   this.$router.push("/home");
+      // });
     }
   }
 };

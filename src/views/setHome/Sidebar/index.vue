@@ -1,8 +1,8 @@
 <template>
   <el-menu
-    router
     style="border-right: none"
     :default-active="$route.path"
+    router
     background-color="#002033"
     text-color="#fff"
     active-text-color="#ffd04b"
@@ -17,26 +17,26 @@
         <i class="el-icon-chat-round"></i>
         <span>镜像管理</span>
       </template>
-      <el-menu-item index="/sysadmin/task">用户管理</el-menu-item>
-      <el-menu-item index="/sysadmin/result">市场镜像</el-menu-item>
+      <el-menu-item index="/home/userManagement">用户管理</el-menu-item>
+      <el-menu-item index="/home/marketImage">市场镜像</el-menu-item>
     </el-submenu>
     <el-submenu index="3">
       <template slot="title">
         <i class="el-icon-chat-round"></i>
         <span>容器管理</span>
       </template>
-      <el-menu-item index="/sysadmin/task">容器模板</el-menu-item>
-      <el-menu-item index="/sysadmin/result">容器部署</el-menu-item>
+      <el-menu-item index="/home/containerTem">容器模板</el-menu-item>
+      <el-menu-item index="/home/containerDeploy">容器部署</el-menu-item>
     </el-submenu>
     <el-submenu index="4">
       <template slot="title">
         <i class="el-icon-chat-round"></i>
         <span>云边消息</span>
       </template>
-      <el-menu-item index="/sysadmin/task">节点配置</el-menu-item>
-      <el-menu-item index="/sysadmin/result">消息下发</el-menu-item>
+      <el-menu-item index="/home/nodeConfig">节点配置</el-menu-item>
+      <el-menu-item index="/home/messageDistribution">消息下发</el-menu-item>
     </el-submenu>
-    <el-menu-item index="/comment">
+    <el-menu-item index="/home/dataAnalysis">
       <i class="el-icon-chat-dot-round"></i>
       <span slot="title">数据分析</span>
     </el-menu-item>
